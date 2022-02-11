@@ -1,6 +1,6 @@
 /.dart_tool
 .packages
 pubspec.lock
-/build
 test.bat
 /test
+/build

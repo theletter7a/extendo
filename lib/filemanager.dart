@@ -1,8 +1,10 @@
 import 'dart:io';
-import 'package:yaml/yaml.dart';
-void writeManifest(String dir, String content){
+import 'dart:convert';
 
+void writeManifest(String dir, Map content){
+  File(dir+'/manifest.json').writeAsString(JsonEncoder().convert(content));
 }
 
-void writeContent(String content){
+void writeScript(String dir, String content){
+  File(dir+'/content.js').writeAsString(content);
 }

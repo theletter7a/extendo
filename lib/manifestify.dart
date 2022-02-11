@@ -1,7 +1,6 @@
 import 'package:yaml/yaml.dart';
-import 'dart:io';
 
-String manifestify(String content){
+Map manifestify(String content){
   Map options = loadYaml(content);
 
   Map manifest = {
@@ -18,5 +17,5 @@ String manifestify(String content){
   if(options['matches']!=null){
     manifest[options['matches']];
   }
-  return manifest.toString();
+  return manifest;
 }
